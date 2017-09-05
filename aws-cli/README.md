@@ -31,3 +31,11 @@ nano credentials
 `
 
 ## identity access manage roles
+
+
+## aws sdk
+
+Boto is the Amazon Web Services (AWS) SDK for Python
+
+* boto
+http://boto3.readthedocs.io/en/latest/
