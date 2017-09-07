@@ -4,7 +4,7 @@
 
 * Steps
 
-`
+```
 right click on the Databases container within object explorer.
 
 from context menu select Restore database.
@@ -16,7 +16,7 @@ Specify Source for restore as from device.
 Select Backup media as File.
 
 Click the Add button and browse to the location of the BAK file.
-`
+```
 
 ## How to make remote connectcion
 
@@ -29,7 +29,7 @@ Click the Add button and browse to the location of the BAK file.
 
 * Steps
 
-`
+```
 download db migration tool: https://sqlazuremw.codeplex.com/
 
 run the tool above
@@ -41,4 +41,4 @@ select db and local source
 select db and destination aws
 
 run migration application.
-`
+```
