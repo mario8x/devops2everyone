@@ -1,15 +1,22 @@
 
 
-## Restore from Microsoft SQL Server Management Studio
+## Restore db from .bak file via Microsoft SQL Server Management Studio
 
 * Steps
 
+`
 right click on the Databases container within object explorer.
+
 from context menu select Restore database.
+
 Specify To Database as either a new or existing database.
+
 Specify Source for restore as from device.
+
 Select Backup media as File.
+
 Click the Add button and browse to the location of the BAK file.
+`
 
 ## How to make remote connectcion
 
@@ -17,17 +24,21 @@ Click the Add button and browse to the location of the BAK file.
 
 * Server configure: sample-instance.cg034hpkmmjt.us-east-1.rds.amazonaws.com,1433
 
-*
 
 ## Restore db from local source to aws destination
-* download db migration tool: https://sqlazuremw.codeplex.com/
 
-* run the tool above
+* Steps
 
-* select migrate sql
+`
+download db migration tool: https://sqlazuremw.codeplex.com/
 
-* select db and local source
+run the tool above
 
-* select db and destination aws
+select migrate sql
 
-* run migration application.
+select db and local source
+
+select db and destination aws
+
+run migration application.
+`
