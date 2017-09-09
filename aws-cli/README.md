@@ -35,7 +35,11 @@ nano credentials
 
 ## aws sdk
 
-Boto is the Amazon Web Services (AWS) SDK for Python
+* nodejs:
 
-* boto
+http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/index.html
+
+* python: boto
+
+Boto is the Amazon Web Services (AWS) SDK for Python
 http://boto3.readthedocs.io/en/latest/
