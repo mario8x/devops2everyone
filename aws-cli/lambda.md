@@ -43,5 +43,5 @@ aws lambda update-function-code --zip-flie=fileb://csv_parse.zip --function-name
 * update function source
 
 `
-aws lambda update-function-configuration --function-name lab1 --handler csv_read.js
+aws lambda update-function-configuration --function-name lab1 --handler csv_read.handler
 `
