@@ -17,6 +17,10 @@ As a beginer, i would like to share all steps which i learnt from aws.
 
 * s3
 
+### Analytics
+
+* kinesis
+
 ### Artificial Intelligent
 
 * amazon polly
