@@ -33,6 +33,11 @@ As a beginer, i would like to share all steps which i learnt from aws.
 
 * sns (simple notification services)
 
+### Database
+
+* dynamodb
+
+
 ## db-migration
 
 * sql express
