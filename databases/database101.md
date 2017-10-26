@@ -21,6 +21,9 @@
 - collection = table
 - document = row
 - key value pairs = field
+- managed, HA key-value store
+- 400KB item size limit
+- Rich types like lsts, maps, and sets
 
 * json/nosql
 
@@ -36,7 +39,7 @@ instead of relying entirely on slower disk-based databases
 - Memcached
 - Redis
 
-## Redshift - OLAP 
+## Redshift - OLAP
 
 * Fast, Simple, Cost-Effective Data warehousing
 

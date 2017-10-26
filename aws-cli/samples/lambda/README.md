@@ -51,3 +51,5 @@ aws lambda update-function-configuration --function-name lab2-kinesis --handler 
 ```
 aws kinesis put-records --stream-name lambda-kinesis --records file://sample_records.json
 ```
+
+# lab 3: lambda and dynamodb
