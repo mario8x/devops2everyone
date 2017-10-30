@@ -42,7 +42,7 @@ http://www.webhackingexposed.com
 
     server : IIS, apache
     framework: asp.net, php
-    
+
   * web application: authentication, authorization, site structure, input validation, application logic, and management interfaces
   * database: sql injection
   * web client: cross site scripting attact (CSS) fraud-like phishing.
@@ -77,7 +77,3 @@ http://www.webhackingexposed.com
   * SSL proxy
   * OpenSSL
   * Stunnel
-
-### tools
-
-### how to prevent/fix
