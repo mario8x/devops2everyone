@@ -7,23 +7,23 @@ http://www.webhackingexposed.com
 #### security 101
 
 3 simple ways to hack:
-- directly manipulating the application via its gui
-- tampering with the Uniform Resource Identifier(URI)
-- Tampering with HTTP elements not contained in the URI
+  directly manipulating the application via its gui
+  tampering with the Uniform Resource Identifier(URI)
+  Tampering with HTTP elements not contained in the URI
 
 * gui web hacking
-- as sql injection : ``` `Or 1=1--```
+  as sql injection : ``` `Or 1=1--```
 
 * methods, headers, and body
-- methods : get, post...
-- headers:
+  methods : get, post...
+  headers:
   Authorization: define whether certain types of authentication are used with the request.
   Cache-control
   Referer
   Cookies
 
 * Resources
-- ultimate goal is to gain unauthorized access to web application resources
+  ultimate goal is to gain unauthorized access to web application resources
 
 * authentication, sessions, and authorization
 
@@ -37,25 +37,25 @@ User generated content (UGC)
 * who, when, and where :
 
 * Weak spots:
-- web platform
-server : IIS, apache
-framework: asp.net, php
-- web application: authentication, authorization, site structure, input validation, application logic, and management interfaces
-- database: sql injection
-- web client: cross site scripting attact (CSS) fraud-like phishing.
-- transport : SSL redirection
-- availability (DoS)
+  web platform
+    server : IIS, apache
+    framework: asp.net, php
+  web application: authentication, authorization, site structure, input validation, application logic, and management interfaces
+  database: sql injection
+  web client: cross site scripting attact (CSS) fraud-like phishing.
+  transport : SSL redirection
+  availability (DoS)
 
 * Browser extensions: integration with browsers, transparency(require stand-alone proxies)
-- IE extensions:
-  TmperIE is a browser helper object (BHO)
-  IEWatch
-  IEHeaders
+  IE extensions:
+    TmperIE is a browser helper object (BHO)
+    IEWatch
+    IEHeaders
 
-- Firefox extensions:
-  LiveHTTPHeaders: display raw http/s, edit any portion of the request
-  TamperData: trace and modify http/s include headers and post
-  Modify Headers
+  Firefox extensions:
+    LiveHTTPHeaders: display raw http/s, edit any portion of the request
+    TamperData: trace and modify http/s include headers and post
+    Modify Headers
 
 * HTTP Proxies:(man in the middles)
   Paros Proxy
