@@ -7,9 +7,9 @@ http://www.webhackingexposed.com
 #### security 101
 
 3 simple ways to hack:
-  directly manipulating the application via its gui
-  tampering with the Uniform Resource Identifier(URI)
-  Tampering with HTTP elements not contained in the URI
+  * directly manipulating the application via its gui
+  * Tampering with the Uniform Resource Identifier(URI)
+  * Tampering with HTTP elements not contained in the URI
 
 ##### gui web hacking
   as sql injection : ``` `Or 1=1--```
