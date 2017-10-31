@@ -108,7 +108,7 @@ ansible modules:
 
 ansible variables and facts:
 * referenced by : {{varnames}} syntax
-* there are 3 ansible variables scope: globa, play, host
+* there are 3 ansible variables scope: global, play, host
 * facts: information about hosts in your inventory that's gathered by Ansible when it connects to a host.
     * `ansible host -m setup -u root`
 ansible galaxy:
