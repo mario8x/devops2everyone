@@ -5,7 +5,7 @@ http://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html
 * create an s3 at 1 region (ex: us north)
 upload file: samples/CORS/index.html,samples/CORS/error.html ( permission read for everyone)
 
-* create an s3 at differrent region with above (ex: asia)
+* create an s3 at different region with above (ex: asia)
 
 upload file: samples/CORS/loadpage.html ( permission read for everyone)
 goto permission tab> Cors configuration:

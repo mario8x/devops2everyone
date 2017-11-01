@@ -1,12 +1,33 @@
 # devops2everyone
 
 As a beginer, i would like to share all steps which i learnt from aws.
+The repo's list below is which I have been learning:
+
+* docker
+* ansible
+* aws-cli
+* databases
+
+Each of item will contain in a folder with the structure as below:
+```
+item
+    README.md
+    lesson-item.md
+    /samples
+            demo/practice
+```
 
 ## docker
 
-## ansible 
+https://www.docker.com/what-docker
+
+## ansible
+
+https://www.ansible.com/
 
 ## aws-cli
+
+https://aws.amazon.com/getting-started/resource-center/labs/
 
 * bash-scripting
 * powershell-4-win
@@ -42,6 +63,6 @@ As a beginer, i would like to share all steps which i learnt from aws.
 * dynamodb
 
 
-## db-migration
+## databases
 
 * sql express
