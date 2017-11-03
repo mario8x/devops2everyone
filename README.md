@@ -7,6 +7,8 @@ The repo's list below is which I have been learning:
 * ansible
 * aws-cli
 * databases
+* testing
+* system (sys)
 
 Each of item will contain in a folder with the structure as below:
 ```
