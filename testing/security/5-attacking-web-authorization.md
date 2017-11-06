@@ -15,7 +15,7 @@ seek to "fingerprint" the authz implementation first in order to get the lay of 
 
 by using tool Offline Explorer Pro
 
-## Identify Access Tokens
+### Identify Access Tokens
 
 * access tokens: are often easy to see within web application flows
 ```
@@ -28,7 +28,7 @@ Shopping cart       cart, cartid
 Session Identifier  session ID, sid, sessid
 ```
 
-* COTS session IDs: many common off-the-shelf (COTS) web servers have the capability to generate their own pseudorandom session IDs.
+### COTS session IDs: many common off-the-shelf (COTS) web servers have the capability to generate their own pseudorandom session IDs.
 ```
 server-type server-session-id-variable-name
   iis   ASPSESSIONID
@@ -44,10 +44,8 @@ server-type server-session-id-variable-name
                 SID
                 session_id
 ```
-# Analyzing Session Tokens
+### Analyzing Session Tokens
 
-* Authz attack case studies
-* Authz best practices
 
 # tools
 

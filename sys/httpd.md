@@ -1,3 +1,5 @@
+# httpd
+
 * to install httpd
 
 `
@@ -9,3 +11,7 @@ yum install httpd -y
 `
 service httpd start
 `
+
+# Linux commands
+
+* copy folder

@@ -10,3 +10,10 @@
 8. attacking web application management
 9. hacking web client
 10. the enterprise web application security program
+
+
+# references:
+
+http://www.webhackingexposed.com/tools.html
+https://www.vulnhub.com/
+https://www.exploit-db.com/papers/
