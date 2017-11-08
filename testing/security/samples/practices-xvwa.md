@@ -38,8 +38,4 @@ https://stackoverflow.com/questions/28068155/access-denied-for-user-rootlocalhos
 
 # Attacking techniques
 
-## Profiling
-
-1. Infrastructure profiling
-
-2. Application profiling
+I will try to practice on this site first then categorize them later.

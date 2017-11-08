@@ -4,6 +4,9 @@ As a beginer, i would like to share all steps which i learnt from aws.
 The repo's list below is which I have been learning:
 
 * docker
+* salt
+* puppet
+* testkitchen (https://docs.chef.io/kitchen.html)
 * ansible
 * aws-cli
 * databases

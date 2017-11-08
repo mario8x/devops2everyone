@@ -45,3 +45,6 @@ aws lambda update-function-code --zip-flie=fileb://csv_parse.zip --function-name
 `
 aws lambda update-function-configuration --function-name lab1 --handler csv_read.handler
 `
+## how to test lambda on local
+
+https://aws.amazon.com/blogs/compute/serverless-testing-with-aws-lambda/
