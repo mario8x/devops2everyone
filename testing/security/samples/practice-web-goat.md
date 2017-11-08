@@ -44,7 +44,7 @@ http://localhost:8080/WebGoat/login
 
 I will try to practice test first then categorize them later
 
-1. General
+## General
 
 * http/s basics: learn to intercept request by using zap/burpsuite
 
@@ -63,7 +63,7 @@ Identify type of request: post/get
 
 * http proxies: learn how to deploy proxy on zap/burpsuite
 
-2. injection flow
+## injection flow
 
   1. sql injection
   * data manipulation language (select, insert, update)
