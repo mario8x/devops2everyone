@@ -20,3 +20,6 @@ https://www.hackthis.co.uk/
 
 * or deploy xvwa site as below:
 https://github.com/s4n7h0/xvwa
+
+## References
+http://chousensha.github.io/blog/2014/08/15/pentest-lab-webgoat/

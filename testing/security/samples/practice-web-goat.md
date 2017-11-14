@@ -172,3 +172,59 @@ magicly it passed
 
 ### JWT tokens (under development)
 https://jwt.io/introduction/
+
+## Cross Site Scripting(XSS)
+
+Cross-site script (also commonly known as XSS) is a vulnerability/flaw that combines …​ # the allowance of html/script tags as input that are …​ # rendred into a browser without encoding or sanitization
+
+### Goals
+
+* understand how XSS works
+* understand best practices for defending against XSS injection attacks
+* demonstrate knowledge on:
+  * Reflected XSS injection
+    ```
+    malicious content from a user request: displayed to the user, written into the page
+    social engineering
+    runs with browser privileges inherited from user in browser
+    ```
+  * Stored XSS injections
+  ```
+  malicious content is stored on the server (in a database, file system, or other object) and later displayed to users in a web browser
+  social engineering is not required
+
+  ```
+  * Dom-based XSS injection (also technically reflected )
+  ```
+    malicious content from a user request: by client-side scripts to write html
+  ```
+### Most common Locations
+
+* search fields, input fields, error messages, hidden fields, pages: messages boards, free form comments, and http headers.
+
+### XSS attacks may result in
+
+* steal session cookie, create false request, create false fields, redirect your site,
+* create a request that masquerade as a valid user
+* execute malicious code on an end-user system (active scripting)
+* insert inappropriate content
+
+### Practices
+
+```
+1. simple: concurrency flows
+
+http://localhost:8080/WebGoat/start.mvc#lesson/CrossSiteScripting.lesson/1
+open 2 tabs and input: javascript:alert(document.cookie) you will see that 2 tabs have the same cookies
+input answer: yes then click submit button
+
+2. reflected xss scenario
+http://localhost:8080/WebGoat/start.mvc#lesson/CrossSiteScripting.lesson/6
+step 1. purchase with low value
+step 2. update cart with high prices
+
+3. blind
+http://localhost:8080/WebGoat/start.mvc#lesson/CrossSiteScripting.lesson/10
+console: run command `webgoat.customjs.phoneHome()`
+open server running console to copy random value then input and submit
+```
