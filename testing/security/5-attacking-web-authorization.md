@@ -3,7 +3,7 @@
 Authorization determine what parts of the application authenticated users can access.
 
 * user's session, access token, access control list (ACL): upon logout or session timeout, the token is typically deleted, expired, or otherwise invalidated
-* http basic authn: base64-encoded `username:password` sin http authorize header for every request
+* http basic authn: base64-encoded `username:password` in http authorize header for every request
 
 # Attack techniques
 

@@ -227,4 +227,93 @@ step 2. update cart with high prices
 http://localhost:8080/WebGoat/start.mvc#lesson/CrossSiteScripting.lesson/10
 console: run command `webgoat.customjs.phoneHome()`
 open server running console to copy random value then input and submit
+
+4. stored xss:
+
+https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002)
+
+  * post malicious script to a message board  > database
+  * victim read message > malicious script send sensitive information to attackers
+  http://localhost:8080/WebGoat/start.mvc#lesson/CrossSiteScripting.lesson/12
+
+   Input comment: phoneHome Response is..."><script>webgoat.customjs.phoneHome();</script>
+   it will turn to : <input class="inputbox" type="text" name="email" size="40" value="phoneHome Response is..."> MALICIOUS CODE <!-- />
+   then read value response by using proxy and input to the answer
 ```
+
+
+## Access Control Flaws
+
+https://www.owasp.org/index.php/Top_10_2013-A4-Insecure_Direct_Object_References
+
+### Direct Object References
+
+when an application uses client-provided input to access data and objects.
+
+```
+ex: Examples of Direct Object References using the GET method may look something like
+
+https://some.company.tld/dor?id=12345
+
+https://some.company.tld/images?img=12345
+
+https://some.company.tld/dor/12345
+```
+
+### Insecure Direct Object References
+
+```
+https://some.company.tld/app/user/23398
+
+... and you can view your profile there. What happens if you navigate to:
+
+https://some.company.tld/app/user/23399 …
+```
+
+### Practices
+```
+I. Insecure direct object references
+
+1. Authentication first, abuse authorization later
+ http://localhost:8080/WebGoat/start.mvc#lesson/IDOR.lesson/1
+ input: tom/cat
+
+ http://localhost:8080/WebGoat/start.mvc#lesson/IDOR.lesson/2
+ use proxy to capture responses,
+ You will see 2 paramers: `userId, role` then input and subimit diffs
+2. guessing and predicting patterns
+http://localhost:8080/WebGoat/start.mvc#lesson/IDOR.lesson/3
+capture the userId from the previous request ex: userId=2342384
+input:WebGoat/IDOR/profile/2342384
+
+II. missing function level access control
+
+1. finding hidden items
+http://localhost:8080/WebGoat/start.mvc#lesson/MissingFunctionAC.lesson/1
+Inspect tag: hidden-menu-item
+You will find: Users, Config
+Input hidden item 1, 2: Users, Config
+
+2. parameter tampering
+is a form of web-based attack in which certain parameters in the Uniform Resource Locator(URL)
+or web page form field data entered by a user are changed without that user's authorization.
+
+parameter tampering can often be done with:
+* Cookies
+* Form Fields
+* URL Query Strings
+* HTTP Headers
+
+http://localhost:8080/WebGoat/start.mvc#lesson/MissingFunctionAC.lesson/2
+
+```
+
+## Request forgeries  (xsrf)
+
+attack forces an authenticated user(victim) to send a forged http request, including the victim's session cookie to a vulnerable web application
+which allows the attacker to force the victim's browser to generate request such that the vulnerable app perceives as legitimate from the victim
+
+
+## refrences
+
+https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002)
