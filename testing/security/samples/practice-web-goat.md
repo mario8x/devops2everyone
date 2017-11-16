@@ -210,6 +210,15 @@ Cross-site script (also commonly known as XSS) is a vulnerability/flaw that comb
 * insert inappropriate content
 
 ### Practices
+```
+data to check xss:
+<i>
+<i> hello </i>
+<img src="images/logos/owaps.jpg"/>
+<img src=x onerror=;;alert('xss')/>
+phoneHome Response is..."><script>webgoat.customjs.phoneHome();</script>
+
+```
 
 ```
 1. simple: concurrency flows
@@ -223,12 +232,17 @@ http://localhost:8080/WebGoat/start.mvc#lesson/CrossSiteScripting.lesson/6
 step 1. purchase with low value
 step 2. update cart with high prices
 
-3. blind
+3. dom-based xss
+find the test route to exploit the javascript function
+http://localhost:8080/WebGoat/start.mvc#lesson/CrossSiteScripting.lesson/9
+not solved yet
+
+4. blind
 http://localhost:8080/WebGoat/start.mvc#lesson/CrossSiteScripting.lesson/10
 console: run command `webgoat.customjs.phoneHome()`
 open server running console to copy random value then input and submit
 
-4. stored xss:
+5. stored xss:
 
 https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002)
 
@@ -240,7 +254,9 @@ https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INP
    it will turn to : <input class="inputbox" type="text" name="email" size="40" value="phoneHome Response is..."> MALICIOUS CODE <!-- />
    then read value response by using proxy and input to the answer
 ```
+#### Mitigations
 
+* encoding all the inputs to avoid attacks
 
 ## Access Control Flaws
 
@@ -305,13 +321,77 @@ parameter tampering can often be done with:
 * HTTP Headers
 
 http://localhost:8080/WebGoat/start.mvc#lesson/MissingFunctionAC.lesson/2
+not solved yet.
 
 ```
 
+## Insecure communication
+
+### Insecure login
+  encryption is a very important tool for secure communication.
+
+### Practices
+```
+http://localhost:8080/WebGoat/start.mvc#lesson/InsecureLogin.lesson/1
+click login
+use sniffer tool to capture login info
+input captured user info in to textbox then click submit
+CaptainJack/BlackPearl
+```
+## Client Side
+
+### Client side filtering
+When have too much information is being sent to the client, creating a serious access control problem.
+
+### Bypass front-end restrictions
+
+users have a great degree of control over the front-end of the web application. They can alter HTML code, sometimes also scripts.
+This is why apps that require certain format of input should also validate on server side
+
+### Html tampering
+
+Browsers generally offer many options of editing the displayed content. Developers therefore must be aware that the values sent by the user may have been tampered with
+
+### Practices
+
+```
+1. client side filtering:
+http://localhost:8080/WebGoat/start.mvc#lesson/ClientSideFiltering.lesson/1
+just find the hidden table which contains information of Neville Bartholomew
+Edit option value: in list select user: 112
+the salary will be: 450000
+
+2. bypass front-end restrictions
+
+2.1 field restrictions
+http://localhost:8080/WebGoat/start.mvc#lesson/BypassRestrictions.lesson/1
+inspect elements
+* select field: change it
+<select name="select" multiple>
+* radio button : change them
+<input type="checkbox" name="radio".....>
+* checkbox: change it
+<input type="text" name="checkbox"...>
+* Input restricted max 5 characters: change maxlength to 10
+click submit  
+
+2.2 Validation:
+http://localhost:8080/WebGoat/start.mvc#lesson/BypassRestrictions.lesson/2
+search validate() javascirpt function
+I tried 2 ways:
+1. capture and edit 7 field then send request then click submit
+2. remove validate function and edit 7 fields then click submit
+
+3. Html tampering
+http://192.168.60.148:8080/WebGoat/start.mvc#lesson/HtmlTampering.lesson/1
+just intercept the request then edit the total, and quantity the forward request
+```
 ## Request forgeries  (xsrf)
 
 attack forces an authenticated user(victim) to send a forged http request, including the victim's session cookie to a vulnerable web application
 which allows the attacker to force the victim's browser to generate request such that the vulnerable app perceives as legitimate from the victim
+
+* session hijacking and cross-site request
 
 
 ## refrences
