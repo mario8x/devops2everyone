@@ -30,10 +30,20 @@ node app.js
 
 ```
 npm install
+
 open emulator
+
 input url:  http://localhost:3978/api/messages
 
 run your bot:
 node app.js
 
 ```
+
+# demo
+
+1. QnA
+2. handoff
+3. task automation : registration 
+    * api
+    * web

