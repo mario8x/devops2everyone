@@ -21,7 +21,7 @@ https://www.udemy.com/burp-suite/learn/v4/t/lecture/4170198?start=0
   ```
   * spider (web crawling)
   ```
-  to begin spidering, browser to the target application, then right-click one or more nodes in the targe site map, and choose "spider this host/branch"
+  to begin spidering, browser to the target application, then right-click one or more nodes in the target site map, and choose "spider this host/branch"
   ```
   * benefits:
   to discover information of your site
