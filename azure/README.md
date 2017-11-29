@@ -41,3 +41,22 @@ https://chatbotsmagazine.com/how-to-develop-a-chatbot-from-scratch-62bed1adab8c
 are arranged in a stack. ex: BrowseProducts, PlaceOrder
 
 * rich cards: comprises a title, description, link, and images.
+
+
+### Samples
+
+https://github.com/Microsoft/BotBuilder-Samples/tree/master/Node/capability-SimpleTaskAutomation
+https://github.com/Microsoft/BotBuilder-Samples/tree/master/Nodes
+
+### Presentation
+https://docs.google.com/presentation/d/1RTIHB0ANj1eeykpeyDUCIRHzNgJ7-YoB3t8K-sOHZ00/edit#slide=id.g2b0e3bb3b3_0_253
+
+* state data
+https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-state
+
+* back channel:
+https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-backchannel
+
+## Others
+
+https://www.cleveroad.com/blog/how-to-create-your-own-chatbot-#how-do-chatbots-work-

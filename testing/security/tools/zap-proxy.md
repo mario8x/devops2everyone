@@ -1,6 +1,6 @@
 # zap
 https://github.com/zaproxy/zaproxy/wiki/ZAP-Articles
-
+https://www.youtube.com/watch?v=ZWSLFHpg1So&index=3&list=PLEBitBW-Hlsv8cEIUntAO8st2UGhmrjUB
 ```
 an easy to use webapp pentest tool
 
@@ -19,6 +19,7 @@ an easy to use webapp pentest tool
 Tools > Options:
 * Dynamic SSL Certificate: generate ssl certificate to capture https request
 * Local Proxy : default port is 8080 (change port to resolve conflicts with webgoat or apache defaul port)
+* Break: to intercept and edit then transfer a request
 
 ## Quick Start
 
@@ -51,7 +52,7 @@ Fuzzing is a technique of submitting lots of invalid or unexpected data to a tar
 Allows you to fuzz any request still using:
 * A build in set of payloads
 * Payloads defined by optional add-ons
-* Custom scripts 
+* Custom scripts
 
 ## Extensibility:
 

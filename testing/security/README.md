@@ -17,3 +17,4 @@
 http://www.webhackingexposed.com/tools.html
 https://www.vulnhub.com/
 https://www.exploit-db.com/papers/
+http://fallensnow-jack.blogspot.com/2011/08/webgoat-xpath-injection.html

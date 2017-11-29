@@ -94,6 +94,7 @@ https://www.owasp.org/index.php/SQL_Injection_Bypassing_WAF
 * blind sql injection
 ```
 ```
+https://www.essentialsql.com/using-conditional-logic-in-sql-with-case-expression/
 
   2. examples:
 ```
@@ -135,11 +136,14 @@ then submit
   * combine all: burpsuite: could user repeater module to input data to save time to make request
   ```
   http://localhost:8080/WebGoat/start.mvc#lesson/SqlInjectionAdvanced.lesson/4
-  tried : http://sechow.com/bricks/docs/login-1.html but failed
 
+  tried 1: http://sechow.com/bricks/docs/login-1.html but failed
+  tried 2: intercept the request then edit the request:
+  column=(case when (true) then hostname else hostname end)
+  it will display all data records
   ```
 
-  4. sql injection mitigations
+  * sql injection order by clause
 
   ```
   use order by
@@ -212,6 +216,8 @@ Cross-site script (also commonly known as XSS) is a vulnerability/flaw that comb
 
 ### XSS attacks may result in
 
+https://www.owasp.org/index.php/Testing_for_Reflected_Cross_site_scripting_(OTG-INPVAL-001)
+
 * steal session cookie, create false request, create false fields, redirect your site,
 * create a request that masquerade as a valid user
 * execute malicious code on an end-user system (active scripting)
@@ -237,8 +243,8 @@ input answer: yes then click submit button
 
 2. reflected xss scenario
 http://localhost:8080/WebGoat/start.mvc#lesson/CrossSiteScripting.lesson/6
-step 1. purchase with low value
-step 2. update cart with high prices
+steps: input <script>alert('my javascript here')</script> into all of input fields
+and found that field credit card number is css injected
 
 3. dom-based xss
 find the test route to exploit the javascript function
@@ -447,7 +453,7 @@ output: null
 https://www.owasp.org/index.php/Top_10_2013-A9-Using_Components_with_Known_Vulnerabilities
 https://www.youtube.com/watch?v=bhJmVBJ-F-4
 
-The opensource community is maturing and the availability of open source software has become prolific without
+The open source community is maturing and the availability of open source software has become prolific without
 regard to determining the provenance of the libraries used in our applications.
 
 ### questions we should know the answer too:
@@ -501,6 +507,9 @@ Input to check issues:
 </contact>
 
 This issue was fixed with xtream >= 1.4.7
+
+
+
 ```
 
 ### Mitigations
@@ -509,6 +518,6 @@ This issue was fixed with xtream >= 1.4.7
 * Baseline open source consumption in your projects
 * Develop an open source component risk management strategy to mitigate current risk and reduce futre risk
 
-## refrences
+## references
 
 https://www.owasp.org/index.php/Testing_for_Stored_Cross_site_scripting_(OTG-INPVAL-002)

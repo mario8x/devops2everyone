@@ -10,3 +10,5 @@ and 5<=>4
 and 5<=>5
 and 5 is null
 or 5 is not null
+(case when (true) then hostname else hostname end)
+(case when (true) then description else id end)

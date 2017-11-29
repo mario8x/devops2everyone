@@ -22,6 +22,10 @@ ngrok http 80
 http://localhost:4040/inspect/http
 4. ngrok -v // to check version
 ```
+3. expose your bot by using ngrok
+1. register your bot
+2. copy link from step (ngrok http 80)
+3.
 
 ## connect to a bot that is running on localhost
 
