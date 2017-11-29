@@ -49,7 +49,6 @@ https://github.com/Microsoft/BotBuilder-Samples/tree/master/Node/capability-Simp
 https://github.com/Microsoft/BotBuilder-Samples/tree/master/Nodes
 
 ### Presentation
-https://docs.google.com/presentation/d/1RTIHB0ANj1eeykpeyDUCIRHzNgJ7-YoB3t8K-sOHZ00/edit#slide=id.g2b0e3bb3b3_0_253
 
 * state data
 https://docs.microsoft.com/en-us/bot-framework/nodejs/bot-builder-nodejs-state
