@@ -37,6 +37,8 @@ https://aws.amazon.com/getting-started/resource-center/labs/
 * bash-scripting
 * powershell-4-win
 
+### Kubernetes (EKS)
+
 ### Compute
 
 * ec2
