@@ -1,1 +1,3 @@
 azure/samples/basic/node_modules/*
+azure/chat-bot/samples/basic/node_modules/*
+./node_modules/*

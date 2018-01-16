@@ -1,5 +1,5 @@
 # principal for bot design
-https://docs.microsoft.com/en-us/bot-framework/bot-design-principles
+https://docs.microsoft.com/en-us/bot-framework/bot-service-design-principles
 
 ## factors that do not guarantee a bot's success
   * how smart the bot is: unlikely that your bot smarter will guarantee happy
@@ -148,7 +148,7 @@ return the information that the user has requested by leveraging a body of data.
 * Combining Search, QnA Maker, and/or LUIS
 
 ## bot to web
-https://docs.microsoft.com/en-us/bot-framework/bot-design-pattern-integrate-browser
+https://docs.microsoft.com/en-us/Bot-Framework/bot-service-design-pattern-integrate-browser
 
 Integrate your bot with a web browser, may need to send the user to a web browser to complete a task then resume
 the conversation with the user after the task has been completed.
@@ -157,11 +157,12 @@ the conversation with the user after the task has been completed.
 
 ## handoff to human
 
-https://docs.microsoft.com/en-us/bot-framework/bot-design-pattern-handoff-human
+https://docs.microsoft.com/en-us/Bot-Framework/bot-service-design-pattern-handoff-human
 
 Regardless of how much artificial intelligence a bot possesses, there may still be times when it
 needs to hand off the conversation to a human being.
 It should recognize when it needs to hand off and provide the user with a clear, smooth transition.
+* Triage
 
 ## bots in app
 https://docs.microsoft.com/en-us/bot-framework/bot-design-pattern-embed-app
@@ -169,7 +170,7 @@ https://docs.microsoft.com/en-us/bot-framework/bot-design-pattern-embed-app
 although bots most commonly exist outside of apps, they can also be integrated with apps.
 
 ### Integrating bot with app
-https://docs.microsoft.com/en-us/bot-framework/bot-design-pattern-embed-app
+https://docs.microsoft.com/en-us/Bot-Framework/bot-service-design-pattern-embed-app
 
 * native mobile app
 * IoT app: can communicate with bot framework by using the Direct Line API.
@@ -177,6 +178,5 @@ https://docs.microsoft.com/en-us/bot-framework/bot-design-pattern-embed-app
 
 ## embed a bot in a website
 
-https://docs.microsoft.com/en-us/bot-framework/bot-design-pattern-embed-web-site
-
+https://docs.microsoft.com/en-us/Bot-Framework/bot-service-design-pattern-embed-web-site
 although bots commonly exist outside of websites, they can also be embedded within a website.

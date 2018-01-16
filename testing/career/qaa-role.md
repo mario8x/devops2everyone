@@ -21,8 +21,6 @@ Be able to work well against deadlines
 Qualifications
 Skills/experience You need to be Successful
 
-
-
 Understanding of web, mobile, API and database testing technologies
 Ongoing knowledge of automated testing industry best practices and trends
 Experience with test automation and test management tools
