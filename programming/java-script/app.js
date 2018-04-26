@@ -1,5 +1,2 @@
-function greet() {
-    console.log("greet");
-}
-greet.language = "English";
-console.log(greet.language);
+var g = G$('John', 'Doe');
+console.log(g);
